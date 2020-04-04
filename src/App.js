@@ -7,15 +7,15 @@ import About from "./containers/About";
 import NavBar from "./components/NavBar";
 import NotFound from "./containers/error/NotFound";
 import Admin from "./containers/Admin";
-import Event from "./containers/Event";
+import Event from "./containers/Event/Event";
+import EventEdit from "./containers/Event/EventEdit";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <div>
           <NavBar />
-
+          
           <Switch>
             <Route exact path="/home">
               <Home />
@@ -32,6 +32,12 @@ function App() {
             <Route exact path="/event">
               <Event />
             </Route>
+            <Route exact path="/event/add">
+              <EventEdit />
+            </Route>
+            <Route exact path="/event/edit/:id">
+              <EventEdit />
+            </Route>
             <Route exact path="/">
               <Home />
             </Route>
@@ -39,7 +45,6 @@ function App() {
               <NotFound />
             </Route>
           </Switch>
-        </div>
       </Router>
     </div>
   );
