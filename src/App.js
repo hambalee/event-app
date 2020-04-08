@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Home from "./containers/Home";
 import Login from "./containers/Login";
+import SignUp from "./containers/SignUp";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About from "./containers/About";
 import NavBar from "./components/NavBar";
@@ -25,6 +26,9 @@ function App() {
             </Route>
             <Route exact path="/login">
               <Login />
+            </Route>
+            <Route exact path="/signup">
+              <SignUp />
             </Route>
             <Route exact path="/admin">
               <Admin />
